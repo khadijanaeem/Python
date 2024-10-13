@@ -1,0 +1,19 @@
+x=int(input("Enter a number: "))
+if x < 2:
+        ans= x 
+else:
+    left, right = 2, int(x) // 2 
+
+    while left <= right:
+        mid = (left + right) // 2
+        mid_squared = mid * mid
+        
+        if mid_squared == x:
+            ans= mid
+        elif mid_squared < x:
+            left = mid + 1
+        else:
+            right = mid - 1
+    
+    ans= right  
+print(ans)
